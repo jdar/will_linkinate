@@ -32,6 +32,8 @@ gem.config "will_linkinate", :lib=>'will_linkinate', :source=>'http://gems.githu
 then
 rake gems:install (eventually. Not yet.)
 
+... and if you want to use the HAML-based generators, you will eventually be able to /generate linkinate_scaffold post comment:references   ... but I think you'll have to declare your models first ... the scaffold will use your has_many declarations.
+
 == LICENSE:
 
 (The MIT License)
