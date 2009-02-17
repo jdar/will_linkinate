@@ -1,26 +1,38 @@
 = will_linkinate
 
-* FIX (url)
+* http://dariusroberts.com/posts/will_linkinate-gem-published
 
 == DESCRIPTION:
 
-FIX (describe your package)
+Scaffolding for Associations with Smart & Flexible syntax options and delimiters.
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+* it's not perfect. (that's for sure)
+* the scaffolding isn't actually done, for one thing.
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+ @seller.products.linkinate :path_to_more => seller_products_path(@seller), 
+                           :limit=>3
+
+  #=> Apples, Oranges, Bananas, and 18 more fruits. 
+ ... where each fruit name links to that fruit, and "18 more fruits" links to sellers_products_path(@seller)
+
+ see more * http://dariusroberts.com/posts/will_linkinate-gem-published
+ ... or look at the source code in init.rb. It's pretty easy to read. Just a bunch of config checks.
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+Rails
 
 == INSTALL:
 
-* FIX (sudo gem install, anything else)
+gem.config "will_linkinate", :lib=>'will_linkinate', :source=>'http://gems.github.com' in environment.rb
+then
+rake gems:install (eventually. Not yet.)
+
+... and if you want to use the HAML-based generators, you will eventually be able to /generate linkinate_scaffold post comment:references   ... but I think you'll have to declare your models first ... the scaffold will use your has_many declarations.
 
 == LICENSE:
 
